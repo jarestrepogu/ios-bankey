@@ -10,15 +10,64 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    
     var window: UIWindow?
+    
+    let loginVC = LoginViewController()
+    let onboardingContainerVC = OnboardingContainerViewController()
+    let dummyVC = DummyViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = LoginViewController()
+        
+        loginVC.delegate = self
+        onboardingContainerVC.delegate = self
+        dummyVC.logoutDelegate = self
+        
+        window?.rootViewController = loginVC
         
         return true
     }
 }
 
+extension AppDelegate {
+    func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard animated, let window = self.window else {
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return
+        }
+        
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        UIView.transition(with: window,
+                          duration: 0.5,
+                          options: .transitionCrossDissolve,
+                          animations: nil,
+                          completion: nil)
+    }
+}
+
+// MARK: - Actions
+extension AppDelegate: LoginViewControllerDelegate {
+    func didLogin() {
+        LocalState.hasOnboarded ? setRootViewController(dummyVC) : setRootViewController(onboardingContainerVC)
+    }
+}
+
+extension AppDelegate: OnboardingContainerViewControllerDelegate {
+    func didFinishOnBoarding() {
+        LocalState.hasOnboarded = true
+        setRootViewController(dummyVC)
+    }
+}
+
+extension AppDelegate: LogoutDelegate {
+    func didLogout() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+            self.setRootViewController(self.loginVC)
+        }
+    }
+}
