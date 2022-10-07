@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230EF1B828F07C680005AD25 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EF1B728F07C680005AD25 /* AccountSummaryViewController.swift */; };
 		23682FCB28C6345600A49D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23682FCA28C6345600A49D0F /* AppDelegate.swift */; };
 		23682FCF28C6345600A49D0F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23682FCE28C6345600A49D0F /* LoginViewController.swift */; };
 		23682FD428C6345A00A49D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23682FD328C6345A00A49D0F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230EF1B728F07C680005AD25 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		23682FC728C6345600A49D0F /* ios-bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-bankey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23682FCA28C6345600A49D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23682FCE28C6345600A49D0F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230EF1B628F07C390005AD25 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				230EF1B728F07C680005AD25 /* AccountSummaryViewController.swift */,
+			);
+			name = AccountSummary;
+			sourceTree = "<group>";
+		};
 		23682FBE28C6345600A49D0F = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 				2379892628EBD982000059F3 /* MainViewController.swift */,
 				23FA918228C8DF25007EBB04 /* Login */,
 				23FA918728CA9830007EBB04 /* Onboarding */,
+				230EF1B628F07C390005AD25 /* AccountSummary */,
 				2379892128EBCE4A000059F3 /* Utils */,
 				23FA918128C8DEDF007EBB04 /* Files */,
 			);
@@ -191,6 +202,7 @@
 				23B434D728D3CD0E000A3FD0 /* OnboardingViewController.swift in Sources */,
 				2379892528EBD6CB000059F3 /* UVViewController+Utils.swift in Sources */,
 				2379892728EBD982000059F3 /* MainViewController.swift in Sources */,
+				230EF1B828F07C680005AD25 /* AccountSummaryViewController.swift in Sources */,
 				23682FCB28C6345600A49D0F /* AppDelegate.swift in Sources */,
 				23FA918928CA9BEF007EBB04 /* OnboardingContainerViewController.swift in Sources */,
 			);
