@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		230EF1B828F07C680005AD25 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EF1B728F07C680005AD25 /* AccountSummaryViewController.swift */; };
+		232C45202908A19D002810DC /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C451F2908A19D002810DC /* Date+Utils.swift */; };
+		232C45222908A61A002810DC /* AccountSumaryViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C45212908A61A002810DC /* AccountSumaryViewController+Utils.swift */; };
 		235B2CF828F1CBB600EAE64F /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B2CF728F1CBB600EAE64F /* AccountSummaryCell.swift */; };
 		235B2CFA28F4E5A300EAE64F /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B2CF928F4E5A300EAE64F /* Decimal+Utils.swift */; };
 		235B2CFC28F4E60900EAE64F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B2CFB28F4E60900EAE64F /* CurrencyFormatter.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		230EF1B728F07C680005AD25 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		232C451F2908A19D002810DC /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		232C45212908A61A002810DC /* AccountSumaryViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSumaryViewController+Utils.swift"; sourceTree = "<group>"; };
 		235B2CF728F1CBB600EAE64F /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		235B2CF928F4E5A300EAE64F /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		235B2CFB28F4E60900EAE64F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				230EF1B728F07C680005AD25 /* AccountSummaryViewController.swift */,
+				232C45212908A61A002810DC /* AccountSumaryViewController+Utils.swift */,
 				235B2CF528F1CB6E00EAE64F /* Header */,
 				235B2CF628F1CB8200EAE64F /* Cells */,
 			);
@@ -170,6 +175,7 @@
 				235B2CFB28F4E60900EAE64F /* CurrencyFormatter.swift */,
 				235D714A2906FB930055064B /* NSNotificationName.swift */,
 				235D714C29070D950055064B /* UITextField+SecureToggle.swift */,
+				232C451F2908A19D002810DC /* Date+Utils.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23FA918428C8DF41007EBB04 /* LoginView.swift in Sources */,
+				232C45202908A19D002810DC /* Date+Utils.swift in Sources */,
 				2379892328EBCE5C000059F3 /* LocalState.swift in Sources */,
 				23B434D928D4E6E4000A3FD0 /* DummyViewController.swift in Sources */,
 				23BC720F28F0ED8C00D7AD62 /* AccountSummaryHeaderView.swift in Sources */,
@@ -322,6 +329,7 @@
 				230EF1B828F07C680005AD25 /* AccountSummaryViewController.swift in Sources */,
 				23682FCB28C6345600A49D0F /* AppDelegate.swift in Sources */,
 				23FA918928CA9BEF007EBB04 /* OnboardingContainerViewController.swift in Sources */,
+				232C45222908A61A002810DC /* AccountSumaryViewController+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
