@@ -152,22 +152,22 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 extension OnboardingContainerViewController {
     
     @objc func backTapped(_ sender: UIButton) {
-        print("Back")
+        guard let previousVC = getPreviousViewController(from: currentVC) else { return }
+        pageViewController.setViewControllers([previousVC], direction: .reverse, animated: true, completion: nil)
     }
     
     @objc func nextTapped(_ sender: UIButton) {
-        print("Next")
+        guard let nextVC = getNextViewController(from: currentVC) else { return }
+        pageViewController.setViewControllers([nextVC], direction: .forward, animated: true, completion: nil)
     }
     
     @objc func closeTapped(_ sender: UIButton) {
         delegate?.didFinishOnBoarding()
-        print("Close")
     }
     
     @objc func doneTapped(_ sender: UIButton) {
         if currentVC == pages[pages.count - 1] {
             delegate?.didFinishOnBoarding()
         }
-        print("Done")
     }
 }
