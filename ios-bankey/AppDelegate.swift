@@ -63,7 +63,7 @@ extension AppDelegate {
             self.window?.makeKeyAndVisible()
             return
         }
-        
+        //
         window.rootViewController = vc
         window.makeKeyAndVisible()
         UIView.transition(with: window,
