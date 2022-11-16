@@ -98,7 +98,6 @@ extension AccountSummaryViewController {
 extension AccountSummaryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard !accountCellViewModels.isEmpty else { return UITableViewCell() }
-        let account = accountCellViewModels[indexPath.row]
         
         if isLoaded {
             let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
@@ -153,7 +152,9 @@ extension AccountSummaryViewController {
             case .success(let profile):
                 self.profile = profile
             case .failure(let error):
-                print(error.localizedDescription)
+                self.showErrorAlert(title: error.getErrorMessage.0,
+                                    message: error.getErrorMessage.1,
+                                    style: .alert)
             }
             group.leave()
         }
@@ -164,7 +165,9 @@ extension AccountSummaryViewController {
             case .success(let accounts):
                 self.accounts = accounts
             case .failure(let error):
-                print(error.localizedDescription)
+                self.showErrorAlert(title: error.getErrorMessage.0,
+                                    message: error.getErrorMessage.1,
+                                    style: .alert)
             }
             group.leave()
         }
